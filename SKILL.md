@@ -18,6 +18,13 @@ import xarray as xr
 
 ---
 
+## When to Use
+
+* When need to fetch DEM for a bbox, use the Example 1
+* When need to check if DEM is availavle for a bbox, use the Example 2
+
+---
+
 ## Usage
 
 This skill defines two functions. Copy both function definitions into your notebook
