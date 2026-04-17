@@ -1,6 +1,6 @@
 ---
 name: py3dep-dem
-description: Use this skill for digital elevation model (DEM) requests: check available 3DEP resolutions for an area, download DEM rasters, compute terrain derivatives (slope, aspect, hillshade), or compute a Relative Elevation Model (REM) for a river floodplain visualization.
+description: "Use this skill for digital elevation model (DEM) requests: check available 3DEP resolutions for an area, download DEM rasters, compute terrain derivatives (slope, aspect, hillshade), or compute a Relative Elevation Model (REM) for a river floodplain visualization."
 ---
 
 # py3dep DEM Skill
