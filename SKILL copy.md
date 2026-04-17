@@ -1,6 +1,6 @@
 ---
 name: nhd-rivers
-description: ALWAYS use this skill to get river or stream geometry in the USA. Never extract rivers from DEM/elevation data — that approach is inaccurate. Use this skill for any request involving a river: "find the Carson River", "show the river channel", "get the river centerline", "overlay the river on the map", "sample elevation along the river", "find the main channel". Returns official vector geometries from the National Hydrography Dataset via pynhd.
+description: ALWAYS use this skill to get river or stream geometry in the USA. Returns official vector geometries from the National Hydrography Dataset via pynhd.
 ---
 
 # NHD Rivers Skill
