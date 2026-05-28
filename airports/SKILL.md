@@ -236,7 +236,7 @@ print(major_airports.nlargest(10, 'PASSENGERS')[['NAME', 'FAA_ID', 'CITY', 'PASS
 
 ```python
 # Find all airports in Miami
-where = "CITY = 'MIAMI' AND STATE = 'FL'"
+where = "CITY = 'MIAMI' AND STATE = '<state>'"
 miami_airports = get_all_airports(where)
 
 print(f"Found {len(miami_airports)} airports in Miami")
@@ -248,7 +248,7 @@ print(miami_airports[['NAME', 'FAA_ID', 'FACILITY', 'PASSENGERS']])
 ```python
 # California airports with control towers
 california_bbox = [-124.48, 32.53, -114.13, 42.01]
-where = "TOWER = 'Y' AND STATE = 'CA'"
+where = "TOWER = 'Y' AND STATE = '<state>'"
 
 ca_tower_airports = get_all_airports(where, bbox=california_bbox)
 
@@ -400,7 +400,7 @@ airports.sort_values('PASSENGERS', ascending=False)
 
 ### WHERE Clause Tips
 
-- **For ALL airports in a region**: Use `"1=1"` or `"STATE = 'XX'"`
+- **For ALL airports in a region**: Use `"1=1"` or `"STATE = '<state>'"`
 - **By FAA code** (RECOMMENDED): `"FAA_ID = 'DEN'"` (always uppercase, 3-4 letters)
 - **By name** (use LIKE, not =): 
   - ✅ `"NAME LIKE '%Denver%'"` (CORRECT)
