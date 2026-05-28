@@ -19,7 +19,7 @@ The service returns the following columns:
 - **UNIT_CODE**: Official NPS unit code (e.g., "YELL" for Yellowstone, "GRCA" for Grand Canyon)
 - **UNIT_NAME**: Official name of the NPS unit
 - **PARKNAME**: Park name (may differ slightly from UNIT_NAME)
-- **STATE**: U.S. state where the park is located (two-letter abbreviation, e.g., "CA", "WY")
+- **STATE**: U.S. state where the park is located 
 - **REGION**: NPS administrative region code (two-letter abbreviation)
 - **UNIT_TYPE**: Type of NPS unit (e.g., "National Park", "National Monument", "National Historic Site")
 - **GNIS_ID**: Geographic Names Information System identifier
@@ -126,7 +126,7 @@ This example demonstrates how to find parks in California. The `STATE` column co
 
 ```python
 # Query for parks in California
-where = "STATE = 'CA'"
+where = "STATE = '<state>'"
 ca_parks = get_features(url, where)
 ```
 
@@ -168,18 +168,6 @@ The **bbox (bounding box) parameter** is essential for efficient spatial queries
 - **Use case**: Always provide a bbox when querying for features in a specific region (like a state or area)
 
 **Why bbox matters**: Without a bbox, the service may return all features matching the WHERE clause across the entire USA, which is inefficient. The bbox acts as a spatial pre-filter, dramatically improving query performance.
-
-### Using the STATE Column
-
-The `STATE` column is a powerful tool for querying parks by location:
-
-- **Format**: Contains two-letter state abbreviations (e.g., "CA", "WY", "AZ")
-- **Query pattern**: Use `STATE = 'XX'` where XX is the state abbreviation
-  - Example: `"STATE = 'CA'"` for California
-  - Example: `"STATE = 'WY'"` for Wyoming
-- **Multiple states**: Use OR to find parks in multiple states
-  - Example: `"STATE = 'CA' OR STATE = 'NV'"` finds parks in California or Nevada
-- **Advantage**: Direct attribute filtering is faster than complex spatial operations
 
 ### Using the UNIT_TYPE Column
 
