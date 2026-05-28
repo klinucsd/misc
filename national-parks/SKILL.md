@@ -20,7 +20,7 @@ The service returns the following columns:
 - **UNIT_NAME**: Official name of the NPS unit
 - **PARKNAME**: Park name (may differ slightly from UNIT_NAME)
 - **STATE**: U.S. state where the park is located 
-- **REGION**: NPS administrative region code (two-letter abbreviation)
+- **REGION**: NPS administrative region code 
 - **UNIT_TYPE**: Type of NPS unit (e.g., "National Park", "National Monument", "National Historic Site")
 - **GNIS_ID**: Geographic Names Information System identifier
 - **GIS_Notes**: Additional notes about the geographic data
@@ -122,7 +122,7 @@ parks_gdf = get_features(url, where)
 
 #### Example 2: Find All National Parks in California
 
-This example demonstrates how to find parks in California. The `STATE` column contains two-letter state abbreviations.
+This example demonstrates how to find parks in California.
 
 ```python
 # Query for parks in California
@@ -186,9 +186,7 @@ Filter by different types of NPS units:
 ### WHERE Clause Tips
 
 - Use `LOWER(field)` for case-insensitive string matching on text fields
-- **For the STATE column**: Use exact match `STATE = 'XX'` where XX is the state abbreviation
-  - Example: `"STATE = 'CA'"` for California
-  - For multiple states: `"STATE = 'CA' OR STATE = 'OR'"` finds parks in California or Oregon
+- **For the STATE column**: Use exact match `STATE = '<state>'` 
 - **For the UNIT_CODE column**: Use exact match `UNIT_CODE = 'XXXX'`
   - Example: `"UNIT_CODE = 'GRCA'"` for Grand Canyon
 - Use `LIKE` with `%` wildcards for partial matches
