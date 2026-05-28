@@ -17,8 +17,8 @@ FID – Internal feature ID used by ArcGIS.
 MSHA_ID – Mine’s official ID assigned by the Mine Safety and Health Administration.
 MINE_NAME – Name of the coal mine.
 MINE_TYPE – Type of mine (e.g., surface, underground).
-MINE_STATE – State FIPS code for the mine’s location.
-state – State name where the mine is located.
+MINE_STATE – Internal state identifier.
+state – State of the mine's location.
 FIPS_COUNT – County FIPS code.
 MINE_COUNT – County name.
 PRODUCTION – Reported coal output for the mine.
@@ -91,8 +91,8 @@ Use the following condition:
    where = f"PrimSource='Coal' AND MINE_NAME='River View Mine'"
 
 ### Example 2: Find all coal mines in a state
-**User Request:** "Find all coal mines in Ohio"
+**User Request:** "Find all coal mines in <state>"
 **Approach:**
 Use the following condition: 
-   where = f"PrimSource='Coal' AND state='Ohio'"   
+   where = f"PrimSource='Coal' AND state='<state>'"   
    
