@@ -41,7 +41,7 @@ All layers share the same fields:
 - **FACILITY**: Facility type (e.g., "AIRPORT", "SEAPLANE BASE")
 - **CITY**: City location
 - **COUNTY**: County location
-- **STATE**: State (2-letter abbreviation)
+- **STATE**: State
 - **OWNER**: Ownership type (e.g., "PUBLIC", "PRIVATE")
 - **ELEV_FEET**: Elevation in feet above sea level
 - **INTL**: International airport (Y/N)
