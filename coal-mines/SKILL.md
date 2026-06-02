@@ -13,21 +13,21 @@ https://services2.arcgis.com/FiaPA4ga0iQKduv3/arcgis/rest/services/Surface_and_U
 
 It returns the following columns:
 
-FID – Internal feature ID used by ArcGIS.
-MSHA_ID – Mine’s official ID assigned by the Mine Safety and Health Administration.
-MINE_NAME – Name of the coal mine.
-MINE_TYPE – Type of mine (e.g., surface, underground).
-MINE_STATE – Internal state identifier.
-state – State of the mine's location.
-FIPS_COUNT – County FIPS code.
-MINE_COUNT – County name.
-PRODUCTION – Reported coal output for the mine.
-PHYSICAL_U – Unit used for the production value (e.g., tons).
-REFUSE – Indicates whether the site is a coal refuse or waste site.
-Source – Data source or provider for this record.
-PERIOD – Reporting period (usually the year).
-Longitude – Mine longitude coordinate.
-Latitude – Mine latitude coordinate.
+FID – Internal feature ID used by ArcGIS.  
+MSHA_ID – Mine’s official ID assigned by the Mine Safety and Health Administration.  
+MINE_NAME – Name of the coal mine.  
+MINE_TYPE – Type of mine (e.g., surface, underground).  
+MINE_STATE – Internal state identifier.  
+state – State of the mine's location.  
+FIPS_COUNT – County FIPS code.  
+MINE_COUNT – County name.  
+PRODUCTION – Reported coal output for the mine.  
+PHYSICAL_U – Unit used for the production value (e.g., tons).  
+REFUSE – Indicates whether the site is a coal refuse or waste site.  
+Source – Data source or provider for this record.  
+PERIOD – Reporting period (usually the year).  
+Longitude – Mine longitude coordinate.  
+Latitude – Mine latitude coordinate.  
 
 
 ## When to Use
@@ -85,13 +85,13 @@ load_features(self_url, where)
 ## Examples
 
 ### Example 1: Find a coal mine by a name
-**User Request:** "Find the coal mine 'River View Mine' "
+**User Request:** "Find the coal mine 'River View Mine' "  
 **Approach:**
 Use the following condition:
    where = f"PrimSource='Coal' AND MINE_NAME='River View Mine'"
 
 ### Example 2: Find all coal mines in a state
-**User Request:** "Find all coal mines in <state>"
+**User Request:** "Find all coal mines in <state>"  
 **Approach:**
 Use the following condition: 
    where = f"PrimSource='Coal' AND state='<state>'"   
